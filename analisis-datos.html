@@ -1,0 +1,336 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Análisis de Datos — Boris Jesús Steinbach Saucedo</title>
+
+<style>
+:root{
+  --bg:#fff;
+  --fg:#111;
+  --muted:#666;
+  --line:#e3e3e3;
+  --accent:#111;
+  --card:#f6f6f6;
+}
+
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0e0e0e;
+    --fg:#eee;
+    --muted:#999;
+    --line:#2a2a2a;
+    --accent:#fff;
+    --card:#181818;
+  }
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  line-height:1.55;
+}
+
+.wrap{
+  max-width:900px;
+  margin:0 auto;
+  padding:0 1.25rem;
+}
+
+header{
+  background:#000;
+  color:#fff;
+  padding:3rem 1.25rem;
+}
+
+header .wrap{
+  padding:0;
+}
+
+h1{
+  margin:0 0 .5rem;
+  font-size:clamp(1.8rem,5vw,2.8rem);
+  font-weight:600;
+}
+
+header p{
+  margin:.15rem 0;
+  color:#bbb;
+}
+
+header a{
+  color:#fff;
+}
+
+section{
+  padding:2rem 0;
+  border-bottom:1px solid var(--line);
+}
+
+h2{
+  font-size:1.3rem;
+  margin:0 0 1rem;
+  font-weight:600;
+}
+
+.muted{
+  color:var(--muted);
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  padding:0;
+  list-style:none;
+}
+
+.tags li{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:.3rem .8rem;
+  font-size:.92rem;
+}
+
+.grafico{
+  margin:2rem 0;
+}
+
+.grafico img{
+  width:100%;
+  height:auto;
+  display:block;
+  border:1px solid var(--line);
+  border-radius:8px;
+}
+
+.boton{
+  display:inline-block;
+  background:var(--fg);
+  color:var(--bg);
+  text-decoration:none;
+  padding:.6rem 1rem;
+  border-radius:6px;
+  font-weight:600;
+}
+
+footer{
+  padding:2rem 0;
+  color:var(--muted);
+  font-size:.85rem;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap">
+
+    <h1>Análisis de Datos</h1>
+
+    <p>
+      Boris Jesús Steinbach Saucedo
+    </p>
+
+    <p>
+      Python · Pandas · NumPy · Matplotlib
+    </p>
+
+    <p style="margin-top:1.2rem">
+      <a href="index.html">← Volver al currículum</a>
+    </p>
+
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+
+  <h2>Análisis Comercial y Segmentación de Clientes</h2>
+
+  <p>
+    Proyecto de análisis exploratorio de datos comerciales orientado
+    a identificar patrones de ventas, comportamiento de clientes y
+    oportunidades de segmentación.
+  </p>
+
+  <ul class="tags">
+    <li>Python</li>
+    <li>Pandas</li>
+    <li>NumPy</li>
+    <li>Matplotlib</li>
+    <li>Análisis comercial</li>
+    <li>Segmentación ABC</li>
+  </ul>
+
+</section>
+
+
+<section>
+
+  <h2>Objetivos</h2>
+
+  <ul>
+    <li>Analizar la distribución de ventas por zona.</li>
+    <li>Identificar las rutas con mayor volumen de ventas.</li>
+    <li>Evaluar la relación entre clientes y ventas.</li>
+    <li>Analizar los principales rubros comerciales.</li>
+    <li>Segmentar clientes mediante metodología ABC/Pareto.</li>
+    <li>Generar visualizaciones para apoyar la toma de decisiones.</li>
+  </ul>
+
+</section>
+
+
+<section>
+
+  <h2>Alcance del análisis</h2>
+
+  <p>
+    El análisis comercial se concentra en las áreas
+    <strong>1000, 2000, 4000, 5000 y 6000</strong>.
+  </p>
+
+  <p class="muted">
+    Los datos utilizados en la versión pública del proyecto serán
+    reemplazados por datos sintéticos para proteger la información
+    comercial original.
+  </p>
+
+</section>
+
+
+<section>
+
+  <h2>Visualizaciones</h2>
+
+
+  <div class="grafico">
+
+    <h3>1. Ventas por Zona</h3>
+
+    <img
+      src="graficos/ventas_por_zona.png"
+      alt="Ventas por zona">
+      
+  </div>
+
+
+  <div class="grafico">
+
+    <h3>2. Top 10 Rutas por Ventas</h3>
+
+    <img
+      src="graficos/top_10_rutas_ventas.png"
+      alt="Top 10 rutas por ventas">
+
+  </div>
+
+
+  <div class="grafico">
+
+    <h3>3. Clientes vs. Ventas por Ruta</h3>
+
+    <img
+      src="graficos/clientes_vs_ventas_ruta.png"
+      alt="Clientes versus ventas por ruta">
+
+  </div>
+
+
+  <div class="grafico">
+
+    <h3>4. Top 10 Rubros por Ventas</h3>
+
+    <img
+      src="graficos/top_10_rubros_ventas.png"
+      alt="Top 10 rubros por ventas">
+
+  </div>
+
+
+  <div class="grafico">
+
+    <h3>5. Distribución de Clientes por Categoría ABC</h3>
+
+    <img
+      src="graficos/distribucion_abc_clientes.png"
+      alt="Distribución de clientes ABC">
+
+  </div>
+
+
+  <div class="grafico">
+
+    <h3>6. Ventas por Categoría ABC</h3>
+
+    <img
+      src="graficos/ventas_por_abc.png"
+      alt="Ventas por categoría ABC">
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <h2>Metodología</h2>
+
+  <p>
+    El proyecto utiliza Python para la carga, transformación,
+    agrupación y visualización de información comercial.
+  </p>
+
+  <p>
+    La segmentación ABC se construye a partir de la participación
+    acumulada de las ventas, permitiendo identificar clientes de
+    mayor importancia comercial.
+  </p>
+
+</section>
+
+
+<section style="border:0">
+
+  <h2>Herramientas</h2>
+
+  <ul class="tags">
+    <li>Python</li>
+    <li>Pandas</li>
+    <li>NumPy</li>
+    <li>Matplotlib</li>
+    <li>VS Code</li>
+  </ul>
+
+  <p style="margin-top:1.5rem">
+    <a class="boton" href="index.html">
+      ← Volver al currículum
+    </a>
+  </p>
+
+</section>
+
+</main>
+
+
+<footer>
+  © Boris Jesús Steinbach Saucedo
+</footer>
+
+</body>
+</html>
+```
