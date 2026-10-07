@@ -71,6 +71,39 @@ footer{padding:2rem 0;color:var(--muted);font-size:.85rem;text-align:center}
   <div class="item"><div class="row"><b>Bachiller en Humanidades</b></div><div class="muted">Colegio Isabel Saavedra</div></div>
 </section>
 
+```html
+<section>
+  <h2>Análisis de Datos</h2>
+
+  <div class="item">
+    <div class="row">
+      <b>Análisis Comercial y Segmentación de Clientes</b>
+      <span class="muted">Python · Pandas · NumPy · Matplotlib</span>
+    </div>
+
+    <p>
+      Proyecto de análisis de datos comerciales orientado a identificar
+      patrones de ventas, comportamiento de clientes y oportunidades
+      de segmentación.
+    </p>
+
+    <ul>
+      <li>Análisis de ventas por zona y ruta.</li>
+      <li>Relación entre cantidad de clientes y ventas.</li>
+      <li>Análisis de principales rubros comerciales.</li>
+      <li>Segmentación de clientes mediante metodología ABC/Pareto.</li>
+      <li>Visualización de resultados mediante Python y Matplotlib.</li>
+    </ul>
+
+    <p>
+      <a href="analisis-datos.html">
+        Ver proyecto completo →
+      </a>
+    </p>
+  </div>
+</section>
+```
+
 <section>
   <h2>Competencias</h2>
   <ul class="tags">
