@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -28,7 +27,7 @@ footer{padding:2rem 0;color:var(--muted);font-size:.85rem;text-align:center}
 </head>
 <body>
 <header><div class="wrap">
-  <h1>Boris Jesús Steinbach Saucedo</h1>
+  <h1>Boris Steinbach Saucedo</h1>
   <p>Ingeniero Comercial · Científico de Datos · Edición de Audio y Video · Producción Musical</p>
   <p><a href="mailto:boris.steinbach.saucedo@gmail.com">boris.steinbach.saucedo@gmail.com</a> · Santa Cruz de la Sierra, Bolivia</p>
 </div></header>
@@ -43,7 +42,7 @@ footer{padding:2rem 0;color:var(--muted);font-size:.85rem;text-align:center}
   <h2>Experiencia</h2>
   <div class="item"><div class="row"><b>Sales Controller</b><span class="muted">ene 2021 – dic 2026</span></div>
     <div class="muted">Fábrica de Mermeladas y Caramelos Watt's Casal S.R.L. · Santa Cruz de la Sierra</div>
-    <div>Pasante (ene–abr 2021) · Asistente Comercial Departamental (2021) · Asistente Comercial Interdepartamental (2022–2026)</div></div>
+    <div>
   <div class="item"><div class="row"><b>Ayudante de Iluminación — Programa «Uno Decide»</b><span class="muted">ene – feb 2020</span></div>
     <div class="muted">Red Uno · Santa Cruz de la Sierra</div></div>
   <div class="item"><div class="row"><b>Actor</b><span class="muted">dic 2017</span></div>
