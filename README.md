@@ -92,7 +92,6 @@ footer{padding:2rem 0;color:var(--muted);font-size:.85rem;text-align:center}
     </p>
   </div>
 </section>
-```
 
 <section>
   <h2>Competencias</h2>
@@ -120,7 +119,5 @@ footer{padding:2rem 0;color:var(--muted);font-size:.85rem;text-align:center}
     <li>Economía</li><li>Política</li><li>Filosofía</li><li>Psicología</li><li>Tecnología</li><li>Gastronomía</li><li>Arte</li>
   </ul>
 </section>
-</main>
-<footer>© Boris Jesús Steinbach Saucedo</footer>
-</body>
-</html>
+<footer>© Boris Steinbach Saucedo</footer>
+
