@@ -87,14 +87,6 @@ footer{padding:2rem 0;color:var(--muted);font-size:.85rem;text-align:center}
       de segmentación.
     </p>
 
-    <ul>
-      <li>Análisis de ventas por zona y ruta.</li>
-      <li>Relación entre cantidad de clientes y ventas.</li>
-      <li>Análisis de principales rubros comerciales.</li>
-      <li>Segmentación de clientes mediante metodología ABC/Pareto.</li>
-      <li>Visualización de resultados mediante Python y Matplotlib.</li>
-    </ul>
-
     <p>
       <a href="analisis-datos.html">
         Ver proyecto completo →
