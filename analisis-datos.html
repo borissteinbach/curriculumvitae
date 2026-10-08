@@ -1,135 +1,152 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Análisis de Datos — Boris Steinbach Saucedo</title>
+  <title>Análisis Comercial y Segmentación de Clientes | Boris Steinbach</title>
 
-<style>
-:root{
-  --bg:#fff;
-  --fg:#111;
-  --muted:#666;
-  --line:#e3e3e3;
-  --accent:#111;
-  --card:#f6f6f6;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      line-height: 1.6;
+    }
 
-@media (prefers-color-scheme:dark){
-  :root{
-    --bg:#0e0e0e;
-    --fg:#eee;
-    --muted:#999;
-    --line:#2a2a2a;
-    --accent:#fff;
-    --card:#181818;
-  }
-}
+    header {
+      background: #111;
+      color: #fff;
+      padding: 3rem 1.5rem;
+    }
 
-*{
-  box-sizing:border-box;
-}
+    .wrap {
+      max-width: 1000px;
+      margin: auto;
+    }
 
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--fg);
-  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  line-height:1.55;
-}
+    header h1 {
+      margin: 0 0 .5rem;
+      font-size: 2rem;
+    }
 
-.wrap{
-  max-width:900px;
-  margin:0 auto;
-  padding:0 1.25rem;
-}
+    header p {
+      margin: .3rem 0;
+      color: #ccc;
+    }
 
-header{
-  background:#000;
-  color:#fff;
-  padding:3rem 1.25rem;
-}
+    header a {
+      color: #fff;
+    }
 
-header .wrap{
-  padding:0;
-}
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
 
-h1{
-  margin:0 0 .5rem;
-  font-size:clamp(1.8rem,5vw,2.8rem);
-  font-weight:600;
-}
+    h2 {
+      margin-top: 2.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: .5rem;
+    }
 
-header p{
-  margin:.15rem 0;
-  color:#bbb;
-}
+    h3 {
+      margin-top: 1.8rem;
+    }
 
-header a{
-  color:#fff;
-}
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      margin: 1.2rem 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
 
-section{
-  padding:2rem 0;
-  border-bottom:1px solid var(--line);
-}
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin-top: 1rem;
+    }
 
-h2{
-  font-size:1.3rem;
-  margin:0 0 1rem;
-  font-weight:600;
-}
+    .tool {
+      background: #eee;
+      padding: .4rem .7rem;
+      border-radius: 5px;
+      font-size: .9rem;
+    }
 
-.muted{
-  color:var(--muted);
-}
+    .project-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
 
-.tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:.5rem;
-  padding:0;
-  list-style:none;
-}
+    .info {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+    }
 
-.tags li{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:999px;
-  padding:.3rem .8rem;
-  font-size:.92rem;
-}
+    .info strong {
+      display: block;
+      margin-bottom: .3rem;
+    }
 
-.grafico{
-  margin:2rem 0;
-}
+    .graph {
+      background: #fff;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
 
-.grafico img{
-  width:100%;
-  height:auto;
-  display:block;
-  border:1px solid var(--line);
-  border-radius:8px;
-}
+    .graph img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
 
-.boton{
-  display:inline-block;
-  background:var(--fg);
-  color:var(--bg);
-  text-decoration:none;
-  padding:.6rem 1rem;
-  border-radius:6px;
-  font-weight:600;
-}
+    .highlight {
+      background: #111;
+      color: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
 
-footer{
-  padding:2rem 0;
-  color:var(--muted);
-  font-size:.85rem;
-  text-align:center;
-}
-</style>
+    .highlight p {
+      color: #ddd;
+    }
+
+    .note {
+      font-size: .9rem;
+      color: #666;
+    }
+
+    footer {
+      max-width: 1000px;
+      margin: 4rem auto 2rem;
+      padding: 0 1.5rem;
+      color: #777;
+      font-size: .9rem;
+    }
+
+    a {
+      color: #111;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -137,197 +154,363 @@ footer{
 <header>
   <div class="wrap">
 
-    <h1>Análisis de Datos</h1>
-
-    <p>
-      Boris Steinbach Saucedo
-    </p>
+    <h1>Análisis Comercial y Segmentación de Clientes</h1>
 
     <p>
       Python · Pandas · NumPy · Matplotlib
     </p>
 
-    <p style="margin-top:1.2rem">
-      <a href="index.html">← Volver al currículum</a>
+    <p>
+      Proyecto de análisis de datos orientado a la toma de decisiones comerciales.
+    </p>
+
+    <p style="margin-top:1.2rem;">
+      <a href="index.html">← Volver al CV</a>
     </p>
 
   </div>
 </header>
 
-<main class="wrap">
 
 <section>
 
-  <h2>Análisis Comercial y Segmentación de Clientes</h2>
+  <h2>Resumen del proyecto</h2>
 
-  <p>
-    Proyecto de análisis exploratorio de datos comerciales orientado
-    a identificar patrones de ventas, comportamiento de clientes y
-    oportunidades de segmentación.
-  </p>
+  <div class="card">
 
-  <ul class="tags">
-    <li>Python</li>
-    <li>Pandas</li>
-    <li>NumPy</li>
-    <li>Matplotlib</li>
-    <li>Análisis comercial</li>
-    <li>Segmentación ABC</li>
-  </ul>
+    <p>
+      Este proyecto analiza información comercial de clientes, ventas,
+      zonas, rutas y rubros con el objetivo de identificar patrones
+      de comportamiento y oportunidades de segmentación.
+    </p>
 
-</section>
+    <p>
+      El análisis utiliza Python para realizar la preparación,
+      agregación y visualización de los datos.
+    </p>
+
+  </div>
 
 
-<section>
+  <h2>Problema de negocio</h2>
 
-  <h2>Objetivos</h2>
+  <div class="card">
 
-  <ul>
-    <li>Analizar la distribución de ventas por zona.</li>
-    <li>Identificar las rutas con mayor volumen de ventas.</li>
-    <li>Evaluar la relación entre clientes y ventas.</li>
-    <li>Analizar los principales rubros comerciales.</li>
-    <li>Segmentar clientes mediante metodología ABC/Pareto.</li>
-    <li>Generar visualizaciones para apoyar la toma de decisiones.</li>
-  </ul>
+    <p>
+      Desde una perspectiva comercial, no todos los clientes,
+      rutas o zonas tienen el mismo impacto sobre las ventas.
+    </p>
 
-</section>
+    <p>
+      Por ello, el análisis busca responder preguntas como:
+    </p>
 
+    <ul>
+      <li>¿Qué zonas concentran mayor volumen de ventas?</li>
+      <li>¿Qué rutas generan mayores ventas?</li>
+      <li>¿Existe relación entre cantidad de clientes y ventas?</li>
+      <li>¿Qué rubros tienen mayor participación?</li>
+      <li>¿Qué clientes representan la mayor parte de las ventas?</li>
+    </ul>
 
-<section>
+  </div>
+
 
   <h2>Alcance del análisis</h2>
 
-  <p>
-    El análisis comercial se concentra en las áreas
-    <strong>1000, 2000, 4000, 5000 y 6000</strong>.
-  </p>
+  <div class="card">
 
-  <p class="muted">
-    Los datos utilizados en esta versión pública del proyecto se han
-    reemplazado por datos sintéticos para proteger la información
-    comercial original.
-  </p>
+    <p>
+      El análisis comercial se concentra exclusivamente en las áreas:
+    </p>
 
-</section>
+    <p>
+      <strong>AREA 1000 · AREA 2000 · AREA 4000 · AREA 5000 · AREA 6000</strong>
+    </p>
+
+    <p>
+      La estructura utilizada sigue la jerarquía:
+    </p>
+
+    <p>
+      <strong>
+        Área → Zona → Ruta → Cliente → Ventas → Rubro
+      </strong>
+    </p>
+
+  </div>
 
 
-<section>
+  <div class="project-info">
+
+    <div class="info">
+      <strong>Registros públicos</strong>
+      30.000
+    </div>
+
+    <div class="info">
+      <strong>Clientes</strong>
+      5.958
+    </div>
+
+    <div class="info">
+      <strong>Áreas analizadas</strong>
+      5
+    </div>
+
+    <div class="info">
+      <strong>Visualizaciones</strong>
+      6
+    </div>
+
+  </div>
+
+
+  <h2>Metodología</h2>
+
+  <div class="card">
+
+    <h3>1. Exploración</h3>
+
+    <p>
+      Revisión de estructura, tipos de datos, registros,
+      clientes y variables disponibles.
+    </p>
+
+    <h3>2. Preparación</h3>
+
+    <p>
+      Normalización de variables y definición del universo
+      comercial correspondiente a las áreas seleccionadas.
+    </p>
+
+    <h3>3. Análisis</h3>
+
+    <p>
+      Agrupación de ventas por zona, ruta, cliente y rubro
+      para identificar patrones comerciales.
+    </p>
+
+    <h3>4. Segmentación</h3>
+
+    <p>
+      Aplicación de metodología ABC basada en la participación
+      acumulada de las ventas de los clientes.
+    </p>
+
+    <h3>5. Visualización</h3>
+
+    <p>
+      Generación de gráficos mediante Matplotlib para facilitar
+      la interpretación de los resultados.
+    </p>
+
+  </div>
+
+
+  <h2>Herramientas</h2>
+
+  <div class="tools">
+
+    <span class="tool">Python</span>
+    <span class="tool">Pandas</span>
+    <span class="tool">NumPy</span>
+    <span class="tool">Matplotlib</span>
+    <span class="tool">VS Code</span>
+
+  </div>
+
 
   <h2>Visualizaciones</h2>
 
 
-  <div class="grafico">
+  <div class="graph">
 
     <h3>1. Ventas por Zona</h3>
 
+    <p>
+      Comparación del volumen de ventas entre las diferentes
+      áreas comerciales analizadas.
+    </p>
+
     <img
       src="graficos/ventas_por_zona.png"
-      alt="Ventas por zona">
-      
+      alt="Ventas por zona"
+    >
+
   </div>
 
 
-  <div class="grafico">
+  <div class="graph">
 
     <h3>2. Top 10 Rutas por Ventas</h3>
 
+    <p>
+      Identificación de las rutas con mayor volumen de ventas.
+    </p>
+
     <img
       src="graficos/top_10_rutas_ventas.png"
-      alt="Top 10 rutas por ventas">
+      alt="Top 10 rutas por ventas"
+    >
 
   </div>
 
 
-  <div class="grafico">
+  <div class="graph">
 
     <h3>3. Clientes vs. Ventas por Ruta</h3>
 
+    <p>
+      Relación entre la cantidad de clientes y el volumen
+      de ventas generado por cada ruta.
+    </p>
+
     <img
       src="graficos/clientes_vs_ventas_ruta.png"
-      alt="Clientes versus ventas por ruta">
+      alt="Clientes versus ventas por ruta"
+    >
 
   </div>
 
 
-  <div class="grafico">
+  <div class="graph">
 
     <h3>4. Top 10 Rubros por Ventas</h3>
 
+    <p>
+      Identificación de los principales rubros comerciales
+      según su volumen de ventas.
+    </p>
+
     <img
       src="graficos/top_10_rubros_ventas.png"
-      alt="Top 10 rubros por ventas">
+      alt="Top 10 rubros por ventas"
+    >
 
   </div>
 
 
-  <div class="grafico">
+  <div class="graph">
 
-    <h3>5. Distribución de Clientes por Categoría ABC</h3>
+    <h3>5. Distribución ABC de Clientes</h3>
+
+    <p>
+      Clasificación de clientes según su contribución acumulada
+      a las ventas.
+    </p>
 
     <img
       src="graficos/distribucion_abc_clientes.png"
-      alt="Distribución de clientes ABC">
+      alt="Distribución de clientes ABC"
+    >
 
   </div>
 
 
-  <div class="grafico">
+  <div class="graph">
 
     <h3>6. Ventas por Categoría ABC</h3>
 
+    <p>
+      Comparación de la participación de ventas entre los
+      segmentos A, B y C.
+    </p>
+
     <img
       src="graficos/ventas_por_abc.png"
-      alt="Ventas por categoría ABC">
+      alt="Ventas por categoría ABC"
+    >
+
+  </div>
+
+
+  <h2>Principales hallazgos</h2>
+
+  <div class="highlight">
+
+    <p>
+      El análisis ABC permite identificar una concentración
+      significativa de las ventas en un grupo reducido de clientes.
+    </p>
+
+    <p>
+      Esta segmentación puede utilizarse como herramienta para
+      priorizar esfuerzos comerciales, seguimiento de clientes
+      estratégicos y planificación de rutas.
+    </p>
+
+    <p>
+      El análisis de rutas y zonas permite complementar esta
+      segmentación desde una perspectiva territorial y operativa.
+    </p>
+
+  </div>
+
+
+  <h2>Datos del proyecto</h2>
+
+  <div class="card">
+
+    <p>
+      Para proteger la confidencialidad de la información comercial,
+      los datos publicados en este portafolio son <strong>sintéticos</strong>.
+    </p>
+
+    <p>
+      La estructura de los datos fue diseñada para conservar relaciones
+      útiles para demostrar las técnicas de análisis sin publicar
+      información comercial real.
+    </p>
+
+    <p>
+      <a href="data_publica/ventas_sinteticas.csv" download>
+        Descargar dataset sintético →
+      </a>
+    </p>
+
+    <p class="note">
+      Los datos, nombres de clientes, rutas, ventas y coordenadas
+      publicados en este proyecto son ficticios y se utilizan
+      exclusivamente con fines demostrativos.
+    </p>
+
+  </div>
+
+
+  <h2>Aplicación empresarial</h2>
+
+  <div class="card">
+
+    <p>
+      Las técnicas utilizadas en este proyecto pueden aplicarse
+      a escenarios reales de análisis comercial, incluyendo:
+    </p>
+
+    <ul>
+      <li>Segmentación y priorización de clientes.</li>
+      <li>Análisis de desempeño de rutas.</li>
+      <li>Evaluación de ventas por zona.</li>
+      <li>Análisis de participación por rubro.</li>
+      <li>Identificación de clientes estratégicos.</li>
+      <li>Apoyo a la planificación comercial.</li>
+    </ul>
 
   </div>
 
 </section>
 
 
-<section>
-
-  <h2>Metodología</h2>
-
-  <p>
-    El proyecto utiliza Python para la carga, transformación,
-    agrupación y visualización de información comercial.
-  </p>
-
-  <p>
-    La segmentación ABC se construye a partir de la participación
-    acumulada de las ventas, permitiendo identificar clientes de
-    mayor importancia comercial.
-  </p>
-
-</section>
-
-
-<section style="border:0">
-
-  <h2>Herramientas</h2>
-
-  <ul class="tags">
-    <li>Python</li>
-    <li>Pandas</li>
-    <li>NumPy</li>
-    <li>Matplotlib</li>
-    <li>VS Code</li>
-  </ul>
-
-  <p style="margin-top:1.5rem">
-    <a class="boton" href="index.html">
-      ← Volver al currículum
-    </a>
-  </p>
-
-</section>
-
-</main>
-
-
 <footer>
-  © Boris Steinbach Saucedo
+
+  <p>
+    Proyecto desarrollado por Boris Steinbach Saucedo.
+  </p>
+
+  <p>
+    <a href="index.html">Volver al CV</a>
+  </p>
+
 </footer>
 
 </body>
