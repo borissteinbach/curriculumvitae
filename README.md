@@ -29,7 +29,7 @@ footer{padding:2rem 0;color:var(--muted);font-size:.85rem;text-align:center}
 <body>
 <header><div class="wrap">
   <h1>Boris Jesús Steinbach Saucedo</h1>
-  <p>Ingeniero Comercial (en curso) · Asistencia comercial · Marketing digital · Producción musical</p>
+  <p>Ingeniero Comercial · Científico de Datos · Edición de Audio y Video · Producción Musical</p>
   <p><a href="mailto:boris.steinbach.saucedo@gmail.com">boris.steinbach.saucedo@gmail.com</a> · Santa Cruz de la Sierra, Bolivia</p>
 </div></header>
 
