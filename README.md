@@ -70,7 +70,6 @@ footer{padding:2rem 0;color:var(--muted);font-size:.85rem;text-align:center}
   <div class="item"><div class="row"><b>Bachiller en Humanidades</b></div><div class="muted">Colegio Isabel Saavedra</div></div>
 </section>
 
-```html
 <section>
   <h2>Análisis de Datos</h2>
 
