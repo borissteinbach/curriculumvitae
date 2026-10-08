@@ -41,9 +41,9 @@ footer{padding:2rem 0;color:var(--muted);font-size:.85rem;text-align:center}
 
 <section>
   <h2>Experiencia</h2>
-  <div class="item"><div class="row"><b>Asistencia Comercial</b><span class="muted">ene 2021 – mar 2023</span></div>
+  <div class="item"><div class="row"><b>Sales Controller</b><span class="muted">ene 2021 – dic 2026</span></div>
     <div class="muted">Fábrica de Mermeladas y Caramelos Watt's Casal S.R.L. · Santa Cruz de la Sierra</div>
-    <div>Pasante (ene–abr 2021) · Asistente Comercial Departamental (2021) · Asistente Comercial Interdepartamental (2022–2023)</div></div>
+    <div>Pasante (ene–abr 2021) · Asistente Comercial Departamental (2021) · Asistente Comercial Interdepartamental (2022–2026)</div></div>
   <div class="item"><div class="row"><b>Ayudante de Iluminación — Programa «Uno Decide»</b><span class="muted">ene – feb 2020</span></div>
     <div class="muted">Red Uno · Santa Cruz de la Sierra</div></div>
   <div class="item"><div class="row"><b>Actor</b><span class="muted">dic 2017</span></div>
