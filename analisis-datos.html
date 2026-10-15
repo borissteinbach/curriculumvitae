@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Dashboard comercial con Power BI, Power Query y DAX: ventas, clientes, rutas y segmentación ABC con datos sintéticos.">
-<title>Proyecto 02 · Dashboard Comercial | Boris Steinbach</title>
+<meta name="description" content="Proyecto de análisis comercial y segmentación de clientes con Python, Pandas, NumPy y Matplotlib. Portafolio de Boris Steinbach Saucedo.">
+<title>Proyecto 01 · Análisis Comercial y Segmentación de Clientes | Boris Steinbach</title>
 <style>
 :root{--bg:#f5f7fa;--surface:#fff;--fg:#182335;--muted:#637084;--line:#dfe5ec;--navy:#142b49;--blue:#2878ba;--chip:#eef3f8}
 @media(prefers-color-scheme:dark){:root{--bg:#101722;--surface:#192333;--fg:#eaf0f7;--muted:#aab7c8;--line:#334153;--navy:#0a1b31;--blue:#76b8ef;--chip:#27374b}}
@@ -58,78 +58,128 @@ a{color:var(--blue);text-underline-offset:3px}
 footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:.9rem}
 .footer-row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 @media(max-width:700px){header{padding:42px 0}.wrap{width:min(100% - 28px,1050px)}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.steps,.graphs{grid-template-columns:1fr}.graph.full{grid-column:auto}.graph p{min-height:0}.card{padding:19px}}
-
-.figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}
-.figure img{width:100%;height:auto;display:block;border-radius:7px;background:#fff}
-.figure figcaption{font-size:.9rem;color:var(--muted);margin-top:12px}
-.note-box{background:var(--chip);border-left:3px solid var(--blue);border-radius:7px;padding:16px 18px;margin-top:16px}
 </style>
 </head>
 <body>
-<header><div class="wrap">
-<p class="eyebrow">Proyecto 02 · Inteligencia de negocios</p>
-<h1>Dashboard Comercial —<br>Ventas, Clientes y Rutas</h1>
-<p class="lead">Panel ejecutivo desarrollado en Power BI para analizar indicadores comerciales, comparar rutas y zonas y comprender la distribución de ventas entre clientes.</p>
-<div class="header-actions">
-<a class="btn" href="../index.html">← Volver al portafolio</a>
-<a class="btn secondary" href="../analisis-datos.html">Ver proyecto Python →</a>
-</div></div></header>
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Proyecto 01 · Análisis exploratorio</p>
+    <h1>Análisis Comercial y<br>Segmentación de Clientes</h1>
+    <p class="lead">Preparación, análisis y visualización de datos comerciales para identificar patrones de ventas, desempeño de rutas y oportunidades de segmentación.</p>
+    <div class="header-actions">
+      <a class="btn" href="index.html">← Volver al portafolio</a>
+      <a class="btn secondary" href="Dashboard_PowerBI/dashboard-powerbi.html">Ver proyecto Power BI →</a>
+    </div>
+  </div>
+</header>
+
 <main class="wrap">
-<section>
-<div class="section-head"><p class="section-kicker">01 / Contexto</p><h2>Resumen del proyecto</h2></div>
-<div class="card"><p>Este proyecto transforma una base de datos sintéticos de actividad comercial en un dashboard desarrollado en Power BI. Permite consultar ventas, clientes únicos, rutas y venta promedio por cliente, y analizar patrones mediante gráficos y filtros por zona.</p><p>El objetivo es facilitar el seguimiento de indicadores y la toma de decisiones comerciales a través de una vista visual e interactiva en Power BI Desktop.</p></div>
-<div class="stats">
-<div class="stat"><strong>30.000</strong><span>Registros sintéticos</span></div>
-<div class="stat"><strong>5.958</strong><span>Clientes únicos (total)</span></div>
-<div class="stat"><strong>40</strong><span>Rutas comerciales (total)</span></div>
-<div class="stat"><strong>6</strong><span>Visualizaciones</span></div>
-</div></section>
-<section>
-<div class="section-head"><p class="section-kicker">02 / Objetivos</p><h2>Problema de negocio</h2></div>
-<div class="card"><p>Una operación comercial con múltiples rutas, clientes y rubros necesita indicadores claros para priorizar esfuerzos y detectar diferencias de desempeño. El dashboard busca responder:</p>
-<ul><li>¿Qué zonas aportan más ventas?</li><li>¿Cuáles son las rutas más productivas?</li><li>¿Cómo se relaciona la cantidad de clientes con las ventas?</li><li>¿Qué rubros concentran mayores ingresos?</li><li>¿Cómo se distribuye el valor de la cartera según la clasificación ABC?</li></ul></div>
-</section>
-<section>
-<div class="section-head"><p class="section-kicker">03 / Alcance</p><h2>Universo de análisis</h2></div>
-<div class="card"><p>El dashboard analiza las siguientes áreas comerciales:</p>
-<div class="tags"><span class="tag">AREA 1000</span><span class="tag">AREA 2000</span><span class="tag">AREA 4000</span><span class="tag">AREA 5000</span><span class="tag">AREA 6000</span></div>
-<p style="margin-top:18px">La información se organiza a partir de clientes, zonas, rutas, rubros y ventas, con un filtro de zona para explorar resultados.</p></div></section>
-<section>
-<div class="section-head"><p class="section-kicker">04 / Proceso</p><h2>Metodología</h2></div>
-<div class="steps">
-<div class="step"><span class="number">PASO 01</span><h3>Preparación</h3><p>Importación de datos sintéticos desde Excel y revisión de columnas y tipos de datos en Power Query.</p></div>
-<div class="step"><span class="number">PASO 02</span><h3>Modelado</h3><p>Creación de una tabla de clientes y relación por código de cliente con la tabla de ventas.</p></div>
-<div class="step"><span class="number">PASO 03</span><h3>Medidas DAX</h3><p>Cálculo de ventas totales, clientes únicos, rutas únicas y venta promedio por cliente.</p></div>
-<div class="step"><span class="number">PASO 04</span><h3>Segmentación ABC</h3><p>Clasificación global de clientes en Power Query según su participación acumulada en las ventas, con umbrales del 80 % y 95 %.</p></div>
-<div class="step"><span class="number">PASO 05</span><h3>Visualización</h3><p>Diseño de cuatro KPI, seis gráficos y un filtro por zona para explorar el desempeño comercial.</p></div>
-</div></section>
-<section>
-<div class="section-head"><p class="section-kicker">05 / Tecnología</p><h2>Herramientas utilizadas</h2></div>
-<div class="tags"><span class="tag">Power BI Desktop</span><span class="tag">Power Query</span><span class="tag">DAX</span><span class="tag">Excel</span><span class="tag">Modelado de datos</span><span class="tag">ABC de clientes</span></div>
-</section>
-<section id="dashboard">
-<div class="section-head"><p class="section-kicker">06 / Resultados visuales</p><h2>Vista del dashboard</h2></div>
-<div class="card"><p>La captura presenta una exploración filtrada a <strong>AREA 1000</strong>: aproximadamente <strong>Bs 31,98 millones</strong> en ventas, <strong>951 clientes únicos</strong> y <strong>8 rutas</strong>. Los KPI y los gráficos de ventas responden a los filtros dentro del archivo interactivo de Power BI.</p></div>
-<figure class="figure" style="margin-top:16px"><img src="dashboard_comercial.png" alt="Dashboard comercial de Power BI con indicadores y seis gráficos; vista filtrada a AREA 1000" loading="lazy"><figcaption>Captura del informe en Power BI Desktop · Datos sintéticos · Vista filtrada a AREA 1000.</figcaption></figure>
-<div class="note-box"><strong>Cómo funciona ABC:</strong> las categorías A, B y C se calculan globalmente en Power Query. Por eso, el gráfico de cantidad de clientes ABC presenta el total global y no cambia con el filtro de zona. El gráfico de ventas por ABC sí refleja las ventas filtradas dentro de esas categorías globales.</div>
-</section>
-<section>
-<div class="section-head"><p class="section-kicker">07 / Indicadores</p><h2>Indicadores y visualizaciones</h2></div>
-<div class="graphs">
-<article class="graph"><h3>01 · Ventas por zona</h3><p>Comparación del volumen de ventas entre las cinco áreas comerciales del conjunto sintético.</p></article>
-<article class="graph"><h3>02 · Top 10 rutas por ventas</h3><p>Ranking de rutas comerciales por ventas, actualizado según la zona seleccionada.</p></article>
-<article class="graph"><h3>03 · Clientes vs. ventas por ruta</h3><p>Gráfico de dispersión para observar relaciones entre cantidad de clientes y ventas por ruta.</p></article>
-<article class="graph"><h3>04 · Ventas por rubro comercial</h3><p>Comparación del volumen de ventas entre distintos tipos de establecimiento.</p></article>
-<article class="graph"><h3>05 · Ventas por categoría ABC</h3><p>Distribución de las ventas entre las categorías globales A, B y C, respetando el filtro de zona.</p></article>
-<article class="graph"><h3>06 · Clientes por categoría ABC</h3><p>Distribución global de clientes clasificados en A, B y C.</p></article>
-</div></section>
-<section>
-<div class="highlight"><p class="eyebrow">08 / Interpretación</p><h2>Aplicación empresarial</h2><p>El dashboard facilita la comparación de resultados comerciales entre zonas y rutas, el seguimiento de indicadores y la identificación de segmentos de clientes con mayor contribución a las ventas.</p><p>Puede servir como base para revisar prioridades comerciales, detectar oportunidades de seguimiento y presentar información a equipos de ventas o gerencia.</p></div>
-</section>
-<section>
-<div class="section-head"><p class="section-kicker">09 / Transparencia</p><h2>Datos del proyecto</h2></div>
-<div class="card"><p>Para proteger la confidencialidad comercial, el proyecto utiliza exclusivamente <strong>datos sintéticos</strong>. Los clientes, rutas, ubicaciones y montos son ficticios y se utilizan con fines demostrativos.</p><p>Esta página muestra una captura estática. La interactividad del informe está disponible en el archivo PBIX abierto en Power BI Desktop.</p><p><a class="download" href="../data_publica/ventas_sinteticas.csv" download>Descargar dataset sintético →</a></p></div>
-</section>
+  <section>
+    <div class="section-head"><p class="section-kicker">01 / Contexto</p><h2>Resumen del proyecto</h2></div>
+    <div class="card">
+      <p>Este proyecto analiza información comercial de clientes, ventas, zonas, rutas y rubros con el objetivo de identificar patrones de comportamiento y oportunidades de segmentación.</p>
+      <p>El análisis utiliza Python para realizar la preparación, agregación y visualización de los datos.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>30.000</strong><span>Registros públicos</span></div>
+      <div class="stat"><strong>5.958</strong><span>Clientes</span></div>
+      <div class="stat"><strong>5</strong><span>Áreas analizadas</span></div>
+      <div class="stat"><strong>6</strong><span>Visualizaciones</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><p class="section-kicker">02 / Objetivos</p><h2>Problema de negocio</h2></div>
+    <div class="card">
+      <p>Desde una perspectiva comercial, no todos los clientes, rutas o zonas tienen el mismo impacto sobre las ventas. El análisis busca responder:</p>
+      <ul>
+        <li>¿Qué zonas concentran mayor volumen de ventas?</li>
+        <li>¿Qué rutas generan mayores ventas?</li>
+        <li>¿Existe relación entre cantidad de clientes y ventas?</li>
+        <li>¿Qué rubros tienen mayor participación?</li>
+        <li>¿Qué clientes representan la mayor parte de las ventas?</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><p class="section-kicker">03 / Alcance</p><h2>Universo de análisis</h2></div>
+    <div class="card">
+      <p>El análisis comercial se concentra exclusivamente en las áreas:</p>
+      <div class="tags"><span class="tag">AREA 1000</span><span class="tag">AREA 2000</span><span class="tag">AREA 4000</span><span class="tag">AREA 5000</span><span class="tag">AREA 6000</span></div>
+      <p style="margin-top:18px">La estructura utilizada sigue la jerarquía <strong>Área → Zona → Ruta → Cliente → Ventas → Rubro</strong>.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><p class="section-kicker">04 / Proceso</p><h2>Metodología</h2></div>
+    <div class="steps">
+      <div class="step"><span class="number">PASO 01</span><h3>Exploración</h3><p>Revisión de estructura, tipos de datos, registros, clientes y variables disponibles.</p></div>
+      <div class="step"><span class="number">PASO 02</span><h3>Preparación</h3><p>Normalización de variables y definición del universo comercial correspondiente a las áreas seleccionadas.</p></div>
+      <div class="step"><span class="number">PASO 03</span><h3>Análisis</h3><p>Agrupación de ventas por zona, ruta, cliente y rubro para identificar patrones comerciales.</p></div>
+      <div class="step"><span class="number">PASO 04</span><h3>Segmentación</h3><p>Aplicación de metodología ABC basada en la participación acumulada de las ventas de los clientes.</p></div>
+      <div class="step"><span class="number">PASO 05</span><h3>Visualización</h3><p>Generación de gráficos mediante Matplotlib para facilitar la interpretación de los resultados.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><p class="section-kicker">05 / Tecnología</p><h2>Herramientas utilizadas</h2></div>
+    <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">VS Code</span></div>
+  </section>
+
+  <section>
+    <div class="section-head"><p class="section-kicker">06 / Resultados visuales</p><h2>Visualizaciones del análisis</h2></div>
+    <div class="graphs">
+      <article class="graph"><h3>01 · Ventas por zona</h3><p>Comparación del volumen de ventas entre las diferentes áreas comerciales analizadas.</p><img src="graficos/ventas_por_zona.png" alt="Ventas por zona" loading="lazy"></article>
+      <article class="graph"><h3>02 · Top 10 rutas por ventas</h3><p>Identificación de las rutas con mayor volumen de ventas.</p><img src="graficos/top_10_rutas_ventas.png" alt="Top 10 rutas por ventas" loading="lazy"></article>
+      <article class="graph"><h3>03 · Clientes vs. ventas por ruta</h3><p>Relación entre la cantidad de clientes y el volumen de ventas generado por cada ruta.</p><img src="graficos/clientes_vs_ventas_ruta.png" alt="Clientes versus ventas por ruta" loading="lazy"></article>
+      <article class="graph"><h3>04 · Top 10 rubros por ventas</h3><p>Identificación de los principales rubros comerciales según su volumen de ventas.</p><img src="graficos/top_10_rubros_ventas.png" alt="Top 10 rubros por ventas" loading="lazy"></article>
+      <article class="graph"><h3>05 · Distribución ABC de clientes</h3><p>Clasificación de clientes según su contribución acumulada a las ventas.</p><img src="graficos/distribucion_abc_clientes.png" alt="Distribución de clientes ABC" loading="lazy"></article>
+      <article class="graph"><h3>06 · Ventas por categoría ABC</h3><p>Comparación de la participación de ventas entre los segmentos A, B y C.</p><img src="graficos/ventas_por_abc.png" alt="Ventas por categoría ABC" loading="lazy"></article>
+    </div>
+  </section>
+
+  <section>
+    <div class="highlight">
+      <p class="eyebrow">07 / Interpretación</p>
+      <h2>Principales hallazgos</h2>
+      <p>El análisis ABC permite identificar una concentración significativa de las ventas en un grupo de clientes con mayor contribución.</p>
+      <p>Esta segmentación puede utilizarse para priorizar esfuerzos comerciales, dar seguimiento a clientes estratégicos y planificar rutas.</p>
+      <p>El análisis de rutas y zonas complementa esta segmentación desde una perspectiva territorial y operativa.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><p class="section-kicker">08 / Transparencia</p><h2>Datos del proyecto</h2></div>
+    <div class="card">
+      <p>Para proteger la confidencialidad de la información comercial, los datos publicados en este portafolio son <strong>sintéticos</strong>.</p>
+      <p>La estructura de los datos fue diseñada para conservar relaciones útiles para demostrar las técnicas de análisis sin publicar información comercial real.</p>
+      <p><a class="download" href="data_publica/ventas_sinteticas.csv" download>Descargar dataset sintético →</a></p>
+      <p class="note">Los datos, nombres de clientes, rutas, ventas y coordenadas publicados en este proyecto son ficticios y se utilizan exclusivamente con fines demostrativos.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><p class="section-kicker">09 / Aplicación</p><h2>Aplicación empresarial</h2></div>
+    <div class="card">
+      <p>Las técnicas utilizadas en este proyecto pueden aplicarse a escenarios reales de análisis comercial, incluyendo:</p>
+      <ul>
+        <li>Segmentación y priorización de clientes.</li>
+        <li>Análisis de desempeño de rutas.</li>
+        <li>Evaluación de ventas por zona.</li>
+        <li>Análisis de participación por rubro.</li>
+        <li>Identificación de clientes estratégicos.</li>
+        <li>Apoyo a la planificación comercial.</li>
+      </ul>
+    </div>
+  </section>
 </main>
-<footer><div class="wrap footer-row"><span>Proyecto desarrollado por Boris Steinbach Saucedo · Datos sintéticos</span><a href="../index.html">← Volver al CV</a></div></footer>
-</body></html>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>Proyecto desarrollado por Boris Steinbach Saucedo · Datos sintéticos</span>
+    <a href="index.html">← Volver al CV</a>
+  </div>
+</footer>
+</body>
+</html>
