@@ -1,4 +1,57 @@
-<img
-  src="dashboard_comercial.png"
-  alt="Dashboard comercial desarrollado en Power BI"
->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Dashboard comercial en Power BI: análisis de ventas, clientes, rutas, rubros y segmentación ABC con datos sintéticos.">
+<title>Dashboard Comercial — Portafolio | Boris Steinbach Saucedo</title>
+<style>
+:root{--bg:#fff;--fg:#111;--muted:#666;--line:#e3e3e3;--card:#f6f6f6;--navy:#142b49;--blue:#2878ba}
+@media(prefers-color-scheme:dark){:root{--bg:#0e0e0e;--fg:#eee;--muted:#aaa;--line:#2a2a2a;--card:#181818}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.65}
+.wrap{max-width:960px;margin:auto;padding:0 1.25rem}header{background:#000;color:#fff;padding:4rem 0 3.4rem}header h1{font-size:clamp(2rem,5vw,3rem);line-height:1.15;letter-spacing:-.035em;font-weight:650;margin:.8rem 0}header p{color:#d5d5d5;max-width:760px}a{color:inherit}.back{font-size:.9rem;color:#ddd;text-decoration:none}.back:hover{text-decoration:underline}.eyebrow{font-size:.8rem;text-transform:uppercase;letter-spacing:.13em;color:#bbb;font-weight:700}
+.button{display:inline-block;margin-top:1rem;padding:.7rem 1rem;border:1px solid #fff;border-radius:6px;text-decoration:none;color:#fff;font-weight:600}.button:hover{background:#fff;color:#000}
+section{padding:2.6rem 0;border-bottom:1px solid var(--line)}h2{font-size:1.45rem;margin:0 0 1rem;letter-spacing:-.015em}h3{font-size:1.04rem;margin:.2rem 0 .5rem}p{margin:.6rem 0 1rem}.muted{color:var(--muted)}.tags{display:flex;flex-wrap:wrap;gap:.55rem;padding:0;list-style:none}.tags li{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.35rem .85rem;font-size:.88rem}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.card{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:1.25rem}.card p{color:var(--muted);font-size:.94rem}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem;margin-top:1.5rem}.stat{border:1px solid var(--line);border-radius:8px;padding:1rem}.stat strong{display:block;font-size:1.4rem;line-height:1.3}.stat span{display:block;color:var(--muted);font-size:.84rem;margin-top:.35rem}.figure{margin:1.5rem 0 0}.figure img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:9px}.figure figcaption{font-size:.88rem;color:var(--muted);margin-top:.7rem}.notice{border-left:3px solid var(--blue);background:var(--card);padding:1rem 1.2rem;margin-top:1.2rem}.steps{padding-left:1.35rem}.steps li{margin-bottom:.6rem}footer{padding:2.2rem 0;color:var(--muted);font-size:.86rem;text-align:center}
+@media(max-width:680px){header{padding:2.8rem 0}.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}section{padding:2rem 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="back" href="../index.html">← Volver al portafolio</a>
+<p class="eyebrow">Proyecto de análisis de datos · Power BI</p>
+<h1>Dashboard Comercial — Ventas, Clientes y Rutas</h1>
+<p>Diseño de un panel ejecutivo para explorar indicadores comerciales, comparar el desempeño de rutas y zonas, y analizar la concentración de ventas por cliente.</p>
+<a class="button" href="#dashboard">Ver dashboard ↓</a>
+</div></header>
+<main class="wrap">
+<section><h2>Resumen del proyecto</h2>
+<p>El proyecto transforma una base de datos sintéticos de actividad comercial en un dashboard visual desarrollado en Power BI. Permite consultar ventas, clientes únicos, rutas y venta promedio por cliente, y analizar patrones mediante gráficos y filtros por zona.</p>
+<ul class="tags"><li>Power BI Desktop</li><li>Power Query</li><li>DAX</li><li>Modelado de datos</li><li>Segmentación ABC</li><li>Visualización comercial</li></ul>
+<div class="stats"><div class="stat"><strong>30.000</strong><span>Registros sintéticos</span></div><div class="stat"><strong>5.958</strong><span>Clientes únicos (total)</span></div><div class="stat"><strong>40</strong><span>Rutas comerciales (total)</span></div><div class="stat"><strong>5</strong><span>Áreas comerciales</span></div></div>
+</section>
+<section id="dashboard"><h2>Vista del dashboard</h2>
+<p>La captura muestra una exploración filtrada a <strong>AREA 1000</strong>: aproximadamente Bs 31,98 millones en ventas, 951 clientes únicos y 8 rutas. Los indicadores cambian al seleccionar otras zonas dentro del archivo interactivo de Power BI.</p>
+<figure class="figure"><img src="dashboard_comercial.png" alt="Dashboard comercial en Power BI filtrado a AREA 1000, con KPI y seis gráficos de ventas, rutas, rubros y ABC" loading="lazy"><figcaption>Captura del informe en Power BI Desktop. Datos completamente sintéticos; vista filtrada a AREA 1000.</figcaption></figure>
+<div class="notice"><strong>Nota sobre la segmentación ABC:</strong> las categorías A, B y C se calcularon para toda la cartera en Power Query. Por ello, el gráfico de cantidad de clientes ABC representa la clasificación global y no se recalcula con el filtro de zona; el gráfico de ventas ABC sí refleja las ventas filtradas dentro de esas categorías.</div>
+</section>
+<section><h2>Problema de negocio</h2>
+<p>Una operación comercial con múltiples rutas, clientes y rubros necesita indicadores claros para priorizar esfuerzos y detectar diferencias de desempeño. El dashboard organiza la información para responder preguntas como: ¿qué zonas aportan más ventas?, ¿cuáles son las rutas más productivas?, ¿cómo se relaciona la cantidad de clientes con las ventas?, ¿qué rubros concentran ingresos? y ¿cómo se distribuye el valor de la cartera según ABC?</p>
+</section>
+<section><h2>Indicadores y visualizaciones</h2><div class="grid">
+<div class="card"><h3>Indicadores KPI</h3><p>Ventas totales, clientes únicos, rutas únicas y ventas promedio por cliente mediante medidas DAX.</p></div>
+<div class="card"><h3>Ventas por zona</h3><p>Comparación del volumen de ventas entre las cinco áreas comerciales incluidas en el conjunto sintético.</p></div>
+<div class="card"><h3>Top 10 rutas por ventas</h3><p>Ranking dinámico de rutas, actualizado según la zona seleccionada.</p></div>
+<div class="card"><h3>Clientes vs. ventas por ruta</h3><p>Gráfico de dispersión para observar asociaciones y diferencias de rendimiento entre rutas.</p></div>
+<div class="card"><h3>Ventas por rubro comercial</h3><p>Comparación de ventas entre tipos de establecimiento, como almacenes, kioscos y minimarkets.</p></div>
+<div class="card"><h3>Segmentación ABC</h3><p>Dos gráficos para visualizar la distribución de clientes y la contribución de ventas por categoría A, B y C.</p></div>
+</div></section>
+<section><h2>Metodología de trabajo</h2><ol class="steps">
+<li><strong>Preparación:</strong> importación de un archivo Excel con registros sintéticos y revisión de tipos de datos.</li>
+<li><strong>Modelado:</strong> creación de la tabla de clientes y relación por código de cliente con la tabla de ventas.</li>
+<li><strong>Medidas DAX:</strong> cálculo de ventas, clientes únicos, rutas únicas y promedio de ventas por cliente.</li>
+<li><strong>ABC en Power Query:</strong> agregación de ventas por cliente, orden descendente, acumulado y clasificación según umbrales del 80 % y 95 %.</li>
+<li><strong>Visualización:</strong> construcción de seis gráficos, KPI y un filtro de zona para exploración del desempeño comercial.</li>
+</ol></section>
+<section><h2>Alcance y privacidad</h2><p>Se utilizaron exclusivamente datos sintéticos generados para demostración. Los nombres de clientes, rutas, ubicaciones y montos no corresponden a registros reales de una empresa. Las áreas representadas son 1000, 2000, 4000, 5000 y 6000.</p><p class="muted">Esta página presenta una vista estática del proyecto. El archivo PBIX es el informe editable e interactivo en Power BI Desktop.</p></section>
+<section><h2>Más proyectos</h2><p>También puedes consultar el proyecto de análisis comercial desarrollado en Python, con visualizaciones y segmentación de clientes.</p><p><a href="../analisis-datos.html">Ver análisis comercial con Python →</a></p><p><a href="../index.html">← Volver al currículum y portafolio</a></p></section>
+</main><footer><div class="wrap">Boris Steinbach Saucedo · Portafolio de análisis de datos · Santa Cruz de la Sierra, Bolivia</div></footer>
+</body></html>
