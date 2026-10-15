@@ -29,7 +29,7 @@ main{padding-top:18px}section{padding:45px 0;border-bottom:1px solid var(--line)
 <section id="experiencia"><div class="section-top"><h2>Experiencia profesional</h2></div><div class="timeline">
 <div class="item"><div class="row"><h3>Sales Controller</h3><span class="date">ene 2021 – dic 2026</span></div><div class="org">Fábrica de Mermeladas y Caramelos Watt's Casal S.R.L. · Santa Cruz de la Sierra</div><p>Gestión y seguimiento de información comercial, control de ventas y apoyo a procesos relacionados con clientes, rutas y desempeño comercial.</p></div>
 <div class="item"><div class="row"><h3>Marketing Digital</h3><span class="date">2016 – 2021</span></div><div class="org">Khro H. | Bienes Raíces · Santa Cruz de la Sierra</div><p>Community Manager.</p></div>
-<div class="item"><div class="row"><h3>Street Marketing</h3><span class="date">ago 2016</span></div><div class="org">SAE S.A.</div></div>
+<div class="item"><div class="row"><h3>Street Marketing</h3><span class="date">ago 2016</span></div><div class="org">SAE S.A.  · Santa Cruz de la Sierra</div>
 <div class="item"><div class="row"><h3>Encargado de Almacén</h3><span class="date">2015</span></div><div class="org">Lavayen Motors · Santa Cruz de la Sierra</div><p>Control de inventario.</p></div>
 <div class="item"><div class="row"><h3>Técnico en computación</h3><span class="date">2012</span></div><div class="org">Zsolutions Corp · Santa Cruz de la Sierra</div><p>Reparación de hardware y software.</p></div>
 </div></section>
