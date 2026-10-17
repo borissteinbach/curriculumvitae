@@ -57,7 +57,6 @@ main{padding-top:18px}section{padding:45px 0;border-bottom:1px solid var(--line)
 <a href="automatizacion-reportes.html">
   Ver proyecto completo →
 </a>
- →
     </a>
   </div>
 </article>
