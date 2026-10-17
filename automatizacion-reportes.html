@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Proyecto de automatización de reportes comerciales con Python, Pandas, OpenPyXL y Matplotlib.">
+<title>Automatización de Reportes Comerciales | Portafolio</title>
+
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --fg: #17191d;
+  --muted: #606775;
+  --line: #e4e7eb;
+  --accent: #1d4c75;
+  --soft: #eaf2f8;
+  --hero: #101c2d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e1218;
+    --surface: #171d26;
+    --fg: #f1f4f8;
+    --muted: #a5aebc;
+    --line: #303845;
+    --accent: #87bde8;
+    --soft: #203347;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+a { color: var(--accent); }
+
+.wrap {
+  max-width: 1060px;
+  margin: auto;
+  padding: 0 26px;
+}
+
+.topbar {
+  background: var(--hero);
+  padding: 20px 0;
+}
+
+.topbar a {
+  color: #d7e0ea;
+  text-decoration: none;
+  font-weight: 650;
+}
+
+.hero {
+  background: var(--hero);
+  color: #ffffff;
+  padding: 65px 0 75px;
+}
+
+.eyebrow {
+  color: #a9c7df;
+  font-size: .8rem;
+  font-weight: 750;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+  letter-spacing: -.04em;
+  margin: 14px 0;
+}
+
+.hero p {
+  max-width: 780px;
+  color: #d7e0ea;
+}
+
+.hero .tools {
+  color: #a9c7df;
+  font-weight: 650;
+}
+
+section {
+  padding: 38px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+h2 {
+  font-size: 1.55rem;
+  margin: 0 0 18px;
+}
+
+h3 { margin-top: 0; }
+
+p { margin: 0 0 14px; }
+
+.muted { color: var(--muted); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.card p { color: var(--muted); }
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.metric {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.metric strong {
+  display: block;
+  font-size: 1.8rem;
+  color: var(--accent);
+}
+
+.metric span {
+  font-size: .88rem;
+  color: var(--muted);
+}
+
+.steps {
+  display: grid;
+  gap: 12px;
+}
+
+.step {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.step strong {
+  color: var(--accent);
+}
+
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg);
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 7px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.button:hover { opacity: .9; }
+
+.gallery-note {
+  padding: 24px;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  color: var(--muted);
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 35px 0;
+  font-size: .9rem;
+}
+
+@media (max-width: 760px) {
+  .grid, .metrics {
+    grid-template-columns: 1fr;
+  }
+  .wrap { padding: 0 18px; }
+  .hero { padding: 48px 0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <nav class="wrap">
+    <a href="index.html">← Volver al portafolio</a>
+  </nav>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Proyecto 03 · Automatización</p>
+    <h1>Automatización de Reportes Comerciales</h1>
+    <p class="tools">
+      Python · Pandas · OpenPyXL · Matplotlib
+    </p>
+    <p>
+      Desarrollo de un sistema automatizado que transforma
+      registros comerciales en indicadores, reportes de Excel
+      y visualizaciones para apoyar la toma de decisiones.
+    </p>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2>Resumen del proyecto</h2>
+  <p>
+    Este proyecto automatiza el procesamiento, análisis y
+    presentación de información comercial mediante Python.
+  </p>
+  <p>
+    Utiliza 30.000 registros sintéticos de ventas y genera
+    un archivo Excel estructurado con indicadores,
+    segmentación de clientes y un Dashboard comercial.
+  </p>
+</section>
+
+<section>
+  <h2>Problema de negocio</h2>
+  <p>
+    La preparación manual de reportes comerciales implica
+    consolidar datos, calcular indicadores, clasificar
+    clientes y construir gráficos repetidamente.
+  </p>
+  <p>
+    La automatización permite ejecutar estas tareas de
+    forma reproducible y reducir el trabajo manual,
+    facilitando el seguimiento del desempeño comercial.
+  </p>
+</section>
+
+<section>
+  <h2>Resultados del sistema</h2>
+
+  <div class="metrics">
+    <div class="metric">
+      <strong>30.000</strong>
+      <span>Registros de entrada</span>
+    </div>
+
+    <div class="metric">
+      <strong>7</strong>
+      <span>Hojas de Excel</span>
+    </div>
+
+    <div class="metric">
+      <strong>4</strong>
+      <span>Gráficos comerciales</span>
+    </div>
+
+    <div class="metric">
+      <strong>96,30 s</strong>
+      <span>Tiempo medido de ejecución</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Funcionamiento de la automatización</h2>
+
+  <div class="steps">
+    <div class="step">
+      <strong>01 · Lectura y limpieza</strong>
+      <p>
+        Importación de datos desde Excel, validación
+        de ventas y aplicación de filtros comerciales.
+      </p>
+    </div>
+
+    <div class="step">
+      <strong>02 · Cálculo de indicadores</strong>
+      <p>
+        Consolidación de ventas, clientes, rutas y zonas.
+        Generación de rankings comerciales.
+      </p>
+    </div>
+
+    <div class="step">
+      <strong>03 · Segmentación ABC</strong>
+      <p>
+        Clasificación de clientes según su contribución
+        acumulada a las ventas.
+      </p>
+    </div>
+
+    <div class="step">
+      <strong>04 · Visualización</strong>
+      <p>
+        Creación de gráficos con Matplotlib y generación
+        de un Dashboard integrado en Excel.
+      </p>
+    </div>
+
+    <div class="step">
+      <strong>05 · Exportación</strong>
+      <p>
+        Aplicación de formato con OpenPyXL y generación
+        automática del reporte final.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Análisis comercial incluido</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Ventas por zona y ruta</h3>
+      <p>
+        Identificación de zonas y rutas con mayor
+        contribución al volumen de ventas.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Segmentación ABC</h3>
+      <p>
+        Clasificación de clientes en categorías A, B y C
+        para priorizar acciones comerciales.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Análisis de Pareto</h3>
+      <p>
+        Visualización de la concentración de ventas
+        y participación acumulada de los clientes.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Dashboard comercial</h3>
+      <p>
+        Presentación consolidada de indicadores y
+        gráficos para facilitar su interpretación.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Visualizaciones del proyecto</h2>
+  <div class="gallery-note">
+    Próximamente: capturas del Dashboard comercial,
+    gráficos de Pareto y reporte Excel generado.
+  </div>
+</section>
+
+<section>
+  <h2>Tecnologías utilizadas</h2>
+  <p>
+    <strong>Python:</strong> ejecución de la automatización.
+  </p>
+  <p>
+    <strong>Pandas:</strong> transformación y análisis de datos.
+  </p>
+  <p>
+    <strong>OpenPyXL:</strong> generación y formato de Excel.
+  </p>
+  <p>
+    <strong>Matplotlib:</strong> elaboración de gráficos.
+  </p>
+</section>
+
+<section>
+  <h2>Código fuente</h2>
+  <p>
+    El repositorio contiene los scripts de automatización,
+    las dependencias y un conjunto de datos sintéticos
+    para reproducir el análisis.
+  </p>
+
+  <a class="button"
+     href="https://github.com/borissteinbach/automatizacion-reportes-comerciales"
+     target="_blank"
+     rel="noopener noreferrer">
+    Ver proyecto en GitHub →
+  </a>
+</section>
+
+</main>
+
+<footer>
+  © 2026 · Portafolio profesional
+</footer>
+
+</body>
+</html>
