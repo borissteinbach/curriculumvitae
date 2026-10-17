@@ -26,6 +26,38 @@ main{padding-top:18px}section{padding:45px 0;border-bottom:1px solid var(--line)
 <article class="project"><div class="project-band"></div><div class="project-content"><p class="kicker">Proyecto 01 · Análisis exploratorio</p><h3>Análisis Comercial y Segmentación de Clientes</h3><p class="tools">Python · Pandas · NumPy · Matplotlib</p><p>Proyecto de análisis de datos comerciales orientado a identificar patrones de ventas, comportamiento de clientes y oportunidades de segmentación.</p><p>Incluye análisis por zona, rutas, rubros y segmentación ABC de clientes mediante visualizaciones en Python.</p><a href="analisis-datos.html">Ver proyecto completo →</a></div></article>
 <article class="project"><div class="project-band"></div><div class="project-content"><p class="kicker">Proyecto 02 · Business Intelligence</p><h3>Dashboard Comercial — Ventas, Clientes y Rutas</h3><p class="tools">Power BI · Power Query · DAX</p><p>Dashboard comercial con indicadores de ventas, clientes y rutas, segmentadores interactivos, ranking de rutas, análisis de rubros y relación entre clientes y ventas.</p><p>Incluye segmentación ABC global de clientes. Proyecto realizado con datos sintéticos para fines de demostración.</p><a href="Dashboard_PowerBI/dashboard-powerbi.html">Ver dashboard completo →</a></div></article>
 </div></section>
+
+<article class="project">
+  <div class="project-band"></div>
+  <div class="project-content">
+    <p class="kicker">Proyecto 03 · Automatización</p>
+
+    <h3>Automatización de Reportes Comerciales</h3>
+
+    <p class="tools">
+      Python · Pandas · OpenPyXL · Matplotlib
+    </p>
+
+    <p>
+      Sistema automatizado que procesa 30.000 registros
+      sintéticos de ventas y genera reportes comerciales
+      en Excel con indicadores y gráficos.
+    </p>
+
+    <p>
+      Incluye análisis de ventas por zona y ruta,
+      segmentación ABC de clientes, gráficos de Pareto
+      y un Dashboard comercial.
+    </p>
+
+    <a href="https://github.com/borissteinbach/automatizacion-reportes-comerciales"
+       target="_blank"
+       rel="noopener noreferrer">
+      Ver proyecto en GitHub →
+    </a>
+  </div>
+</article>
+
 <section id="experiencia"><div class="section-top"><h2>Experiencia profesional</h2></div><div class="timeline">
 <div class="item"><div class="row"><h3>Sales Controller</h3><span class="date">ene 2021 – dic 2026</span></div><div class="org">Fábrica de Mermeladas y Caramelos Watt's Casal S.R.L. · Santa Cruz de la Sierra</div><p>Gestión y seguimiento de información comercial, control de ventas y apoyo a procesos relacionados con clientes, rutas y desempeño comercial.</p></div>
 <div class="item"><div class="row"><h3>Marketing Digital</h3><span class="date">2016 – 2021</span></div><div class="org">Khro H. | Bienes Raíces · Santa Cruz de la Sierra</div><p>Community Manager.</p></div>
