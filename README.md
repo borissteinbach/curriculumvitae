@@ -53,7 +53,11 @@ main{padding-top:18px}section{padding:45px 0;border-bottom:1px solid var(--line)
     <a href="https://github.com/borissteinbach/automatizacion-reportes-comerciales"
        target="_blank"
        rel="noopener noreferrer">
-      Ver proyecto en GitHub →
+      
+<a href="automatizacion-reportes.html">
+  Ver proyecto completo →
+</a>
+ →
     </a>
   </div>
 </article>
